@@ -1,5 +1,12 @@
 # Changelog
 
+## \[0.15.0]
+
+- [`d407869`](https://www.github.com/tauri-apps/tray-icon/commit/d4078696edba67b0ab42cef67e6a421a0332c96f) ([#172](https://www.github.com/tauri-apps/tray-icon/pull/172) by [@madsmtm](https://www.github.com/tauri-apps/tray-icon/../../madsmtm)) Added a new variant `NotMainThread` to the `Error` enum, which is emitted on macOS when trying to create tray icons from a thread that is not the main thread.
+- [`d407869`](https://www.github.com/tauri-apps/tray-icon/commit/d4078696edba67b0ab42cef67e6a421a0332c96f) ([#172](https://www.github.com/tauri-apps/tray-icon/pull/172) by [@madsmtm](https://www.github.com/tauri-apps/tray-icon/../../madsmtm)) Rewrite the internals of the crate to use `objc2` instead of `objc`.
+
+  This should have no user-facing changes, other than improved memory safety, and less leaking.
+
 ## \[0.14.3]
 
 - [`e257d6b`](https://www.github.com/tauri-apps/tray-icon/commit/e257d6bf510b34707d48964a2914ee5c91b13570) ([#169](https://www.github.com/tauri-apps/tray-icon/pull/169)) On Windows, fix `Enter` event emitted only once and never emitted again.
