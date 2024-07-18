@@ -32,7 +32,7 @@ fn main() {
         gtk::main();
     });
 
-    let event_loop = EventLoopBuilder::new().build().unwrap();
+    let event_loop = EventLoop::builder().build().unwrap();
 
     #[cfg(not(target_os = "linux"))]
     let mut tray_icon = None;
